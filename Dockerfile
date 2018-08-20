@@ -1,4 +1,4 @@
-FROM ubuntu:trusty
+FROM ubuntu:xenial
 MAINTAINER Daniel R. Kerr <daniel.r.kerr@gmail.com>
 
 ENV DEBIAN_FRONTEND noninteractive
@@ -13,6 +13,10 @@ RUN apt-get update -y \
 
 RUN wget -O /usr/local/bin/waf https://waf.io/waf-1.8.19 \
  && chmod +x /usr/local/bin/waf
+
+RUN wget -O /opt/fasm-1.73.04.tgz https://flatassembler.net/fasm-1.73.04.tgz \
+ && tar xvzf /opt/fasm-1.73.04.tgz \
+ && rm /opt/fasm-1.73.04.tgz
 
 VOLUME ["/root/prj"]
 
