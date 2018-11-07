@@ -6,6 +6,7 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update -y \
  && apt-get install -qq -y curl git make wget \
  && apt-get install -qq -y build-essential \
+ && apt-get install -qq -y golang \
  && apt-get install -qq -y python python-dev python-pip \
  && apt-get install -qq -y python3 python3-dev python3-pip \
  && apt-get clean \
