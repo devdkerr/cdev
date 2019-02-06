@@ -4,7 +4,7 @@ MAINTAINER Daniel R. Kerr <daniel.r.kerr@gmail.com>
 ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get update -y \
- && apt-get install -qq -y curl git make wget \
+ && apt-get install -qq -y cmake curl git make wget \
  && apt-get install -qq -y build-essential \
  && apt-get install -qq -y gcc-multilib g++-multilib libc6-dev libc6-dev-i386 \
  && apt-get install -qq -y golang \
